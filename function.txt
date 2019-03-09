@@ -1,0 +1,20 @@
+var neeee = ['a', 'b', 'c', 'd'];
+        function arrayColumn(arr, n) {
+            return arr.map(x=> x[n]);
+        }
+        const arrOne = [[1, 11, 111, 1111], [2, 22, 222, 2222], [3, 33, 333, 3333], [4, 44, 444, 4444]];
+        const newArry = [];
+        for ( var i = 0; i < arrOne.length; i++ ) {
+            newArry.push(arrayColumn(arrOne, i));
+        }
+        
+        var json = newArry.map(function(x) {
+            return {    
+                "a": x[0],
+                "b": x[1],
+                "c": x[2],
+                "d": x[3]
+            }
+        })
+
+        console.log('json', json);
